@@ -1,0 +1,1831 @@
+	randomize timer	
+	option TEXTHEIGHT, 28			' Default is 26
+	option TEXTWIDTH,  40			' Default is 38
+	
+palletted: 		DATAINT	$0000,$0CCC,$0000,$0A44,$0C42,$0C44,$0AAA,$0666
+				DATAINT	$0A42,$022A,$0448,$020E,$042A,$04EE,$00EE,$0000
+
+ cls
+ sleep 30
+ print "Welcome GGJ 2016!"
+ print 
+ print "Theme: ";
+ 	ink 1: 
+ 	print "Ritual"
+	ink 0
+ print
+ 	print "Created By: ";
+	ink 2
+	print "Hunter Pearson"
+	ink 0
+	print
+	print
+	print
+	ink 7
+	print "                1-30-2016" 
+	ink 0
+	print
+	print
+	print
+	print
+	print
+	print
+	print "For Global Game Jam 2016"
+ sleep 200
+
+ loadtiles Jam,1120,128
+ pallettes JamColor,0,0,16
+ gosub draw
+ sleep 200
+ cls
+ pallettes palletted,0,0,16
+
+
+	print "This experience is meant to shine"
+	print "light on a ritual "
+	print
+	print "in society that often is taboo"
+	print "and underappreciated"	
+	print
+	print
+	print "The goal is to slow an event down to"
+	print "reveal how much overlooked"
+	print "thought it takes"
+	
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step1:
+	cls
+	sleep 30
+	print "You walk down the long hallway to pay"
+	print "homage to the daily ritual"
+	print
+	print "The hallway is fammiliar and is a"
+	print "pathway often taken"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile1,1120,128
+		pallettes color1,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 1 Menu"
+	print "A) Repeat Description"
+	print "B) Approach water fountains"
+	print "C) Walk to bathroom"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step1
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step2
+		endif	  	
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step6
+		endif	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step2:
+	cls
+	sleep 30
+	print "Two highly reflective water fountains" 
+	print "in front of you"
+	print
+	print "The one on the right"
+	print "is noticeably lower to the ground"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile2,1120,128
+		pallettes color2,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 2 Menu"
+	print "A) Repeat Description"
+	print "B) Step closer"
+	print "C) Investigate water fountains"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step2
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step3
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step3
+		endif	 	
+	wend 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step3:
+	cls
+	sleep 30
+	print "You aproach the shimering idols" 
+	print "of thirst quenching"
+	print "and ponder witch one to drink from"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile3,1120,128
+		pallettes color3,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 3 Menu"
+	print "A) Repeat Description"
+	print "B) Drink from left fountain (taller)"
+	print "C) Drink from right fountain (shorter)"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step3
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step4a1
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step4a1
+		endif	 	
+	wend 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step4a1:
+	cls
+	sleep 30
+	print "The taller left water fountain is far"
+	print "more appealing"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile4a1,1120,128
+		pallettes color4a1,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 4a1 Menu"
+	print "A) Repeat Description"
+	print "B) Lean in for drink"
+	print "C) Extend arm to activate fountain"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step4a1
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step5
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step5
+		endif	 	
+	wend 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step5:
+	cls
+	sleep 30
+	print "The water comes out cold and gives" 
+	print "a slight jolt when it comes in contact"
+	print " with your teeth"
+	print
+	print "Refreshed from the water fountain"
+	print "your journey continues"
+	print
+	print "just at the end of the hallway lies" 
+	print "the destination"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile4a2,1120,128
+		pallettes color4a2,0,0,16
+		gosub draw
+	sleep 300
+	
+		disable screen
+		loadtiles tile4a3,1120,128
+		pallettes color4a3,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 5 Menu"
+	print "A) Repeat Description"
+	print "B) continue down the hallway"
+	print "C) Drink again from fountain"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step5
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step6
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step5
+		endif	 	
+	wend 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step6:
+	cls
+	sleep 30
+	print "The bathroom door stands before you"
+	print
+	print "The door wood with a metal push" 
+	print "plate for entry"
+	print
+	print "adjacent to the door is a two"
+	print "dimensional guide that both"
+	print "restricts and grants acess"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile6,1120,128
+		pallettes color6,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 6 Menu"
+	print "A) Repeat Description"
+	print "B) Push door quitely"
+	print "C) Open door loudly to alert presence"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step6
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step7
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step7
+		endif	 	
+	wend 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step7:
+	cls
+	sleep 30
+	print "Scanning the room imediately while"
+	print "enetering you notice you are"
+	print "alone and sigh in relief"
+	print
+	print
+	print "You enter the bathroom and notice"
+	print "your options"
+	print
+	print "Urnal or Stall?"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile7,1120,128
+		pallettes color7,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 7 Menu"
+	print "A) Repeat Description"
+	print "B) Right on course, take the urinal"
+	print "C) Hang right and take the stall"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step7
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8a1
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b1
+		endif	 	
+	wend 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8b1:
+	cls
+	sleep 30
+	print "After assessing your needs"
+	print "you decide on the stall"
+	print 
+	print "The door was light and opened"
+	print "inward easily"
+	
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b1,1120,128
+		pallettes color8b1,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b1 Menu"
+	print "A) Repeat Description"
+	print "B) Secure the door"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b1
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b2
+		endif	 	
+	wend	
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8b2:
+	cls
+	sleep 30
+	print "After sealing the door, a simple"
+	print "bolt mechanism keeps the door latched"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b2,1120,128
+		pallettes color8b2,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b2 Menu"
+	print "A) Repeat Description"
+	print "B) Double check the lock"
+	print "C) Assess the situation"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b2
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b3
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b3
+		endif	 	
+	wend		
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8b3:
+	cls
+	sleep 30
+	print "Luckily the stall is in good clean"
+	print "condition"
+	print
+	print "The toilet seat is up"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b3,1120,128
+		pallettes color8b3,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b3 Menu"
+	print "A) Repeat Description"
+	print "B) Use bare hand to lower seat"
+	print "C) Use shirt to lower seat"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b3
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b4
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b4
+		endif	 	
+	wend		
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8b4:
+	cls
+	sleep 30
+	print "Not knowing what was on the otherside"
+	print "You use the sleeve of your shirt"
+	print "to lower the seat"
+	print
+	print "It makes a distinct clunk sound"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		disable screen
+		loadtiles tile8b4,1120,128
+		pallettes color8b4,0,0,16
+		gosub draw
+	sleep 300
+		disable screen
+		loadtiles tile8b5,1120,128
+		pallettes color8b5,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b4 Menu"
+	print "A) Repeat Description"
+	print "B) Sit on seat"
+	print "C) look around first"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b4
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b7
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b5
+		endif	 	
+	wend		
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8b5:
+	cls
+	sleep 30
+	print "You notice the bathroom is equiped with"
+	print "disposable toilet seat covers"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b6,1120,128
+		pallettes color8b6,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b5 Menu"
+	print "A) Repeat Description"
+	print "B) Use toilet seat cover"
+	print "C) Do not use a toilet seat cover"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b5
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b6
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b7
+		endif	 	
+	wend		
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8b6:
+	cls
+	sleep 30
+	print "Removeing the toilet seat cover was"
+	print "easy"
+	print 
+	print "Applying the cover without it"
+	print "falling in was not"
+	print 
+	print "Looks good enough"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b6,1120,128
+		pallettes color8b6,0,0,16
+		gosub draw
+	sleep 300
+		disable screen
+		loadtiles tile8b7,1120,128
+		pallettes color8b7,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b6 Menu"
+	print "A) Repeat Description"
+	print "B) Sit"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b6
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b7
+		endif	 
+	wend	
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8b7:
+	cls
+	sleep 30
+	print "You lower yourself upon the throne"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b8,1120,128
+		pallettes color8b8,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b7 Menu"
+	print "A) Repeat Description"
+	print "B) Look at toilet paper holder"
+	print "C) Use toilet"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b7
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b8
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b9
+		endif	 	
+	wend	
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''		
+Step8b8:
+	cls
+	sleep 30
+	print "One last check"
+	print
+	print "You look into the translucent"
+	print "toilet paper holder"
+	print
+	print "To confirm its cargo"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b9,1120,128
+		pallettes color8b9,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b8 Menu"
+	print "A) Repeat Description"
+	print "B) Skip the details"
+	print "C) SKIP THE DETAILS!!!!"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b8
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b9
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b9
+		endif	 	
+	wend		
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''		
+Step8b9:
+	cls
+	sleep 30
+	print "Mission complete"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+	pallettes palletted,0,0,16
+	print "Step 8b9 Menu"
+	print "A) Repeat Description"
+	print "B) Stand up"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b9
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b10
+		endif	 	 	
+	wend	
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''		
+Step8b10:
+	cls
+	sleep 30
+	print "You turn around to assess the situation"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+
+		disable screen
+		loadtiles tilec11b,1120,128
+		pallettes colorc11b,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b10 Menu"
+	print "A) Repeat Description"
+	print "B) Flush toilet"
+	print "C) Face the stall door"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b10
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b11
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b12
+		endif	 	
+	wend	
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''		
+Step8b11:
+	cls
+	sleep 30
+	print "The handle was simple to operate"
+	print
+	print "A very much familiar sound is heard"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b11,1120,128
+		pallettes color8b11,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b11 Menu"
+	print "A) Repeat Description"
+	print "B) Face the stall door"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b11
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b12
+		endif	 	
+	wend	
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''		
+Step8b12:
+	cls
+	sleep 30
+	print "The bathroom stall door is"
+	print "infront of you"
+	print 
+	print "You unlock the door"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tilec12b,1120,128
+		pallettes colorc12b,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b12 Menu"
+	print "A) Repeat Description"
+	print "B) Step outside"
+	print "C) Go back in"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b12
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8b13
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b13
+		endif	 	
+	wend				
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''		
+Step8b13:
+	cls
+	sleep 30
+	print "You leave the stall"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8b13,1120,128
+		pallettes color8b13,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8b13 Menu"
+	print "A) Repeat Description"
+	print "B) Look for sink"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8b13
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step9
+		endif	 
+	
+	wend		
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8a1:
+	cls
+	sleep 30
+	print "The urinal is clean with an auto flush"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8a1,1120,128
+		pallettes color8a1,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8a1 Menu"
+	print "A) Repeat Description"
+	print "B) Use urinal (no details)"
+	print "C) Use stall"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8a1
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step8a2
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step8b1
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step8a2:
+	cls
+	sleep 30
+	print "You step closer"
+	print
+	print
+	print
+	ink 2
+	print "     *Details omitted*"
+	ink 0
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile8a2,1120,128
+		pallettes color8a2,0,0,16
+		gosub draw
+	sleep 300
+		disable screen
+		loadtiles tile8a3,1120,128
+		pallettes color8a3,0,0,16
+		gosub draw
+	sleep 300
+	
+	cls
+	pallettes palletted,0,0,16
+	print "Step 8a2 Menu"
+	print "A) Repeat Description"
+	print "B) Look for sink"
+	print "C) Leave bathroom"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step8a2
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step9
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step19
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step9:
+	cls
+	sleep 30
+	print "The facilities have been used and now"
+	print "all that remains is sanitation"
+	print 
+	print "In a nook of the room is a sink" 
+	print "and a towel dispenser"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile9,1120,128
+		pallettes color9,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 9 Menu"
+	print "A) Repeat Description"
+	print "B) Step closer to sink"
+	print "C) Leave room"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step9
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step10
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step19
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step10:
+	cls
+	sleep 30
+	print "The sink is reflective with its metal"
+	print "components"
+	print
+	print "It has come to your attention that" 
+	print "the sink is an automatic"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile10,1120,128
+		pallettes color10,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 10 Menu"
+	print "A) Repeat Description"
+	print "B) Step closer"
+	print "C) Step back"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step10
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step11
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step9
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step11:
+	cls
+	sleep 30
+	print "As you get closer you notice the shine"
+	print "and polish of the fixture"
+	print "the sink is installed into"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile11,1120,128
+		pallettes color11,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 11 Menu"
+	print "A) Repeat Description"
+	print "B) Activate sink"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step11
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step12		
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step12:
+	cls
+	sleep 30
+	print "After waiving your hands in the sink"
+	print "Water apears as if by wizzardry"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile12,1120,128
+		pallettes color12,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 12 Menu"
+	print "A) Repeat Description"
+	print "B) Wash hands"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step12
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step13		
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step13
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step13:
+	cls
+	sleep 30
+	print "The water is cold to the touch"
+	print "but quickly warms to a suitable"
+	print "temperature"
+	print
+	print "Soap was readily available across"
+	print "from the towel dispencer"
+	print
+	print "the soap has a faint scent, not enough"
+	print "to be overpowering but enough to be"
+	print "noticed"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile13,1120,128
+		pallettes color13,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 13 Menu"
+	print "A) Repeat Description"
+	print "B) Look for towel"
+	print "C) Leave bathroom"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step13
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step14		
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step19
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step14:
+	cls
+	sleep 30
+	print "A paper towel hangs percaruoisly"
+	print "ready to be grabbed"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile14,1120,128
+		pallettes color14,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 14 Menu"
+	print "A) Repeat Description"
+	print "B) Grab paper towel"
+	print "C) Leave bathroom"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step14
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step15		
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step19
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step15:
+	cls
+	sleep 30
+	print "The paper towel is dry to the touch"
+	print "and has a semi rough texture"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile15,1120,128
+		pallettes color15,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 15 Menu"
+	print "A) Repeat Description"
+	print "B) Rip off towel"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step15
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step16	
+		endif	  	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step16:
+	cls
+	sleep 30
+	print "The paper towel is towrn away from his"
+	print "home and is in your grasp"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile16,1120,128
+		pallettes color16,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 16 Menu"
+	print "A) Repeat Description"
+	print "B) Dry hands"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step16
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step17	
+		endif	  	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step17:
+	cls
+	sleep 30
+	print "The paper towel seemed to have done the"
+	print "trick and all that remain is a moist"
+	print "balled up paper towel"
+	print
+	print
+	print "Its rule has been acomplished"
+	print "and now needs to be disposed of"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile17,1120,128
+		pallettes color17,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 17 Menu"
+	print "A) Repeat Description"
+	print "B) Look for garbage"
+	print "C) leave bathroom"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step17
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step19	
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step18
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step18:
+	cls
+	sleep 30
+	print "You see the garbage bin filled with the paper towel's previouse conrads"
+	print
+	print "Although the rubish bin is nearing full there is still room for this towel"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+
+		disable screen
+		loadtiles tilec18,1120,128
+		pallettes colorc18,0,0,16
+		gosub draw	
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 18 Menu"
+	print "A) Repeat Description"
+	print "B) Add towel to the pile and leave"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step18
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step19	
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step19:
+	cls
+	sleep 30
+	print "The door of the bathroom is all that"
+	print "remains"
+	print
+	print
+	print "You notice the door has a pull handle"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile19,1120,128
+		pallettes color19,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 19 Menu"
+	print "A) Repeat Description"
+	print "B) Step closer"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step19
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step20	
+		endif	  	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step20:
+	cls
+	sleep 30
+	print "Without haveing a good way to grasp"
+	print "the handle"
+	print 
+	print "It apears the papertowel may have been"
+	print "sacfificed for clean hands for"
+	print "approximately five seconds"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile20,1120,128
+		pallettes color20,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 20 Menu"
+	print "A) Repeat Description"
+	print "B) Grab handle"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step20
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step21	
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step21:
+	cls
+	sleep 30
+	print "Accepting your unsanitary fate,"
+	print "you grasp the cold metal handle"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile21,1120,128
+		pallettes color21,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 21 Menu"
+	print "A) Repeat Description"
+	print "B) Pull door"
+	print "C) Push door"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step21
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step22	
+		endif	 
+		
+		'CButton
+		if JoyStickInput = 32 then
+			goto Step21
+		endif	 	
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step22:
+	cls
+	sleep 30
+	print "The door pulls towards you revealing"
+	print "a pillar of sunlight on the floor"
+	print "before you"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile22,1120,128
+		pallettes color22,0,0,16
+		gosub draw
+	sleep 300
+	cls
+	pallettes palletted,0,0,16
+	print "Step 22 Menu"
+	print "A) Repeat Description"
+	print "B) Leave bathroom"
+	while 1
+		JoyStickInput=joypad(0)
+		'AButton
+		if JoyStickInput = 64 then
+			goto Step22
+		endif	 
+		
+		'BButton
+		if JoyStickInput = 16 then
+			goto Step23	
+		endif	 
+	wend
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
+Step23:
+	cls
+	sleep 30
+	print "The ritual is done"
+	locate 23, 0
+	print "Press any button to continue"
+	while joypad()=0: wend
+		waitpadup 0
+		cls
+		sleep 30
+		
+		disable screen
+		loadtiles tile23,1120,128
+		pallettes color23,0,0,16
+		gosub draw
+	sleep 600
+	cls
+	pallettes palletted,0,0,16
+
+
+
+
+StartimageLoop:
+	cls
+	print "Thank you for playing!"
+	print
+	print
+	print "Created By: ";
+	ink 2
+	print "Hunter Pearson"
+	ink 0
+	print
+	print
+	print
+	ink 7
+	print "                1-30-2016" 
+	ink 0
+	print
+	print
+	print
+	print
+	print
+	print
+	print "For Global Game Jam 2016"
+	cls
+		disable screen
+		loadtiles tilec1,1120,128
+		pallettes colorc1,0,0,16
+		gosub draw
+	sleep 200
+		disable screen
+		loadtiles tilec2,1120,128
+		pallettes colorc2,0,0,16
+		gosub draw
+	sleep 200
+		disable screen
+		loadtiles tilec3,1120,128
+		pallettes colorc3,0,0,16
+		gosub draw
+	sleep 200
+		disable screen
+		loadtiles tilec4,1120,128
+		pallettes colorc4,0,0,16
+		gosub draw
+	sleep 200
+		disable screen
+		loadtiles tilec5,1120,128
+		pallettes colorc5,0,0,16
+		gosub draw
+	sleep 200
+		disable screen
+		loadtiles tilec7,1120,128
+		pallettes colorc7,0,0,16
+		gosub draw
+	sleep 200
+		disable screen
+		loadtiles tilec8,1120,128
+		pallettes colorc8,0,0,16
+		gosub draw
+	sleep 200
+		disable screen
+		loadtiles Credits,1120,128
+		pallettes CreditsColor,0,0,16
+		gosub draw
+	sleep 600	
+	pallettes palletted,0,0,16
+ goto StartimageLoop
+
+
+
+
+tile1:		datafile path\1.bin,bin
+tile2:		datafile path\2.bin,bin
+tile3:		datafile path\3.bin,bin
+tile4a1:	datafile path\4\a\1a.bin,bin
+tile4a2:	datafile path\4\a\2a.bin,bin
+tile4a3:	datafile path\4\a\3a.bin,bin
+tile5:		datafile path\5.bin,bin
+tile6:		datafile path\6.bin,bin
+tile7:		datafile path\7.bin,bin
+tile8a1:	datafile path\8\a\1a.bin,bin
+tile8a2:	datafile path\8\a\2a.bin,bin
+tile8a3:	datafile path\8\a\3a.bin,bin
+tile8b1:	datafile path\8\b\1b.bin,bin
+tile8b2:	datafile path\8\b\2b.bin,bin
+tile8b3:	datafile path\8\b\3b.bin,bin
+tile8b4:	datafile path\8\b\4b.bin,bin
+tile8b5:	datafile path\8\b\5b.bin,bin
+tile8b6:	datafile path\8\b\6b.bin,bin
+tile8b7:	datafile path\8\b\7b.bin,bin
+tile8b8:	datafile path\8\b\8b.bin,bin
+tile8b9:	datafile path\8\b\9b.bin,bin
+tile8b10:	datafile path\8\b\10b.bin,bin
+tile8b11:	datafile path\8\b\11b.bin,bin
+tile8b12:	datafile path\8\b\12b.bin,bin
+tile8b13:	datafile path\8\b\13b.bin,bin
+tile9:		datafile path\9.bin,bin
+tile10:		datafile path\10.bin,bin
+tile11:		datafile path\11.bin,bin
+tile12:		datafile path\12.bin,bin
+tile13:		datafile path\13.bin,bin
+tile14:		datafile path\14.bin,bin
+tile15:		datafile path\15.bin,bin
+tile16:		datafile path\16.bin,bin
+tile17:		datafile path\17.bin,bin
+tile18:		datafile path\18.bin,bin
+tile19:		datafile path\19.bin,bin
+tile20:		datafile path\20.bin,bin
+tile21:		datafile path\21.bin,bin
+tile22:		datafile path\22.bin,bin
+tile23:		datafile path\23.bin,bin
+
+color1:		DATAINT	$0000,$0000,$0666,$0A88,$0EEE,$0CAA,$0CCA,$0686
+			DATAINT	$0886,$0866,$0688,$0000,$0000,$0000,$0000,$0000
+color2:		DATAINT	$0666,$0666,$08AA,$0CCC,$0CCA,$0688,$0ACC,$0222
+			DATAINT	$0668,$0224,$0CAC,$0424,$0000,$0000,$0000,$0000
+color3:		DATAINT	$0666,$0668,$0666,$0AAA,$0222,$0242,$0866,$0688
+			DATAINT	$0868,$0686,$0886,$0424,$0000,$0000,$0000,$0000
+color4a1:	DATAINT	$0AAA,$0AAA,$0666,$0222,$0688,$0424,$0244,$0668
+			DATAINT	$0868,$0866,$0686,$0000,$0000,$0000,$0000,$0000
+color4a2:	DATAINT	$0222,$0222,$0444,$0224,$0AAA,$0CCC,$0ACC,$0ACA
+			DATAINT	$0CCA,$0688,$0668,$0000,$0000,$0000,$0000,$0000
+color4a3:	DATAINT	$0AAA,$0AAA,$0688,$0666,$0668,$0222,$0422,$0868
+			DATAINT	$0866,$0244,$0000,$0000,$0000,$0000,$0000,$0000
+color5:		DATAINT	$0AAA,$0AAA,$0466,$0688,$0668,$0244,$0224,$0686
+			DATAINT	$06EE,$06AC,$0000,$0000,$0000,$0000,$0000,$0000
+color6:		DATAINT	$0224,$0224,$0466,$0468,$0AAA,$0688,$0ACE,$0CCC
+			DATAINT	$0022,$0ACA,$0268,$06CE,$028A,$06AC,$0000,$0000
+color7:		DATAINT	$0CCC,$0CCC,$0ACC,$08AA,$0668,$0466,$0666,$0688
+			DATAINT	$0224,$0022,$0222,$0446,$0444,$0000,$0000,$0000	
+color8a1:	DATAINT	$088A,$088A,$0CCC,$0ACC,$0668,$0688,$0466,$0224
+			DATAINT	$0446,$0444,$0666,$0222,$0002,$0000,$0000,$0000
+color8a2:	DATAINT	$088A,$088A,$0688,$0AAC,$0CCC,$0466,$0446,$0444
+			DATAINT	$0224,$0666,$0668,$0022,$0000,$0000,$0000,$0000
+color8a3:	DATAINT	$088A,$088A,$0ACC,$0CCC,$0688,$0668,$0AAC,$0666
+			DATAINT	$0466,$0446,$0444,$0224,$0222,$0022,$0000,$0000		
+color8b1:	DATAINT	$0466,$0466,$0446,$08AA,$0AAC,$0CCE,$0ACC,$0666
+			DATAINT	$0688,$0668,$0244,$0222,$0444,$0002,$0000,$0000
+color8b2:	DATAINT	$08AA,$08AA,$0888,$0668,$0688,$0666,$0AAC,$0CEE
+			DATAINT	$0ACC,$0466,$0444,$0000,$0000,$0000,$0000,$0000
+color8b3:	DATAINT	$0888,$0888,$0CCC,$0688,$0ACC,$0AAC,$0668,$0446
+			DATAINT	$0666,$0444,$0466,$0002,$0224,$0000,$0000,$0000
+color8b4:	DATAINT	$0466,$0888,$0466,$0688,$08AA,$0AAA,$0ACC,$0000
+			DATAINT	$0668,$0CCC,$0224,$0000,$0000,$0000,$0000,$0000
+color8b5:	DATAINT	$0446,$0446,$0CCC,$0224,$0222,$0668,$0002,$0000
+			DATAINT	$0688,$0AAC,$0AAA,$0000,$0000,$0000,$0000,$0000
+color8b6:	DATAINT	$0ACC,$0CCC,$0ACC,$0AAA,$08AA,$0888,$0668,$0688
+			DATAINT	$0466,$0224,$0222,$0000,$0000,$0000,$0000,$0000	
+color8b7:	DATAINT	$0446,$0446,$0224,$0002,$08AA,$0022,$0668,$0688
+			DATAINT	$0000,$0CCC,$0AAC,$0000,$0000,$0000,$0000,$0000
+color8b8:	DATAINT	$0CCC,$0CCC,$0ACC,$0AAC,$08AA,$0688,$0888,$0466
+			DATAINT	$0668,$088A,$0222,$0224,$0244,$0000,$0000,$0000
+color8b9:	DATAINT	$0EEE,$0EEE,$0AAC,$08AA,$0ACC,$088A,$0888,$0668
+			DATAINT	$0688,$0466,$0224,$0222,$0000,$0000,$0000,$0000
+color8b10:	DATAINT	$08AA,$0668,$0466,$08AA,$0AAC,$0222,$0224,$0002
+			DATAINT	$0ACC,$0688,$0CCE,$0000,$0000,$0000,$0000,$0000
+color8b11:	DATAINT	$0888,$0888,$08AA,$0AAA,$0688,$0ACC,$0466,$0022
+			DATAINT	$0668,$0CCC,$0224,$0244,$0000,$0000,$0000,$0000
+color8b12:	DATAINT	$08AA,$08AA,$0888,$0668,$0688,$0666,$0AAC,$0CEE
+			DATAINT	$0ACC,$0466,$0444,$0000,$0000,$0000,$0000,$0000		
+color8b13:	DATAINT	$0222,$0466,$0222,$0244,$0022,$0024,$0668,$0688
+			DATAINT	$08AA,$0ACC,$0CCC,$0AAC,$0000,$0000,$0000,$0000				
+color9:		DATAINT	$0244,$0466,$0222,$0224,$0244,$0668,$08AA,$0888
+			DATAINT	$0ACC,$0AAC,$0EEE,$0688,$0000,$0000,$0000,$0000
+color10:	DATAINT	$0000,$0000,$0002,$0446,$088A,$0688,$0244,$0222
+			DATAINT	$0CEE,$0ACC,$0668,$0224,$0AAC,$0000,$0000,$0000
+color11:	DATAINT	$0224,$0224,$0244,$0466,$0022,$0468,$0668,$0CEE
+			DATAINT	$0688,$0ACE,$08AA,$0AAC,$08AC,$068A,$06AA,$0000
+color12:	DATAINT	$0466,$0022,$0466,$0224,$0246,$0468,$08AA,$088A
+			DATAINT	$0AAC,$068A,$0ACE,$0CEE,$0000,$0000,$0000,$0000
+color13:	DATAINT	$0688,$0466,$0688,$088A,$08AA,$0888,$0AAC,$0CEE
+			DATAINT	$0468,$0022,$0ACC,$0224,$0246,$0000,$0000,$0000
+color14:	DATAINT	$0002,$0002,$0446,$0466,$0666,$0CCE,$0444,$08AA
+			DATAINT	$0688,$0224,$0AAC,$0ACC,$0668,$0244,$0000,$0000	
+color15:	DATAINT	$0000,$0000,$0446,$0244,$088A,$0ACC,$0CCC,$0466
+			DATAINT	$0668,$0224,$0666,$0688,$0468,$0000,$0000,$0000
+color16:	DATAINT	$0002,$0002,$0444,$0446,$0224,$08AA,$0CCC,$0666
+			DATAINT	$0AAC,$0466,$0668,$0688,$0000,$0000,$0000,$0000	
+color17:	DATAINT	$0002,$0002,$0466,$0468,$0688,$088A,$0246,$0024
+			DATAINT	$08AA,$08AC,$0CEE,$0ACC,$0888,$0AAA,$0000,$0000
+color18:	DATAINT	$0466,$0222,$0466,$0224,$0244,$088A,$0688,$0AAC
+			DATAINT	$0668,$0ACC,$0CCE,$0EEE,$0000,$0000,$0000,$0000
+color19:	DATAINT	$0EEE,$0EEE,$0AAA,$0668,$0688,$0666,$0ACC,$0466
+			DATAINT	$0468,$0446,$0246,$0266,$0244,$0224,$0444,$0000				
+color20:	DATAINT	$0AAA,$0AAA,$0886,$0466,$0268,$0246,$0688,$0024
+			DATAINT	$0686,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+color21:	DATAINT	$0AAA,$0AAA,$0466,$0686,$0468,$0688,$0246,$0022
+			DATAINT	$0886,$0268,$0866,$0000,$0000,$0000,$0000,$0000
+color22:	DATAINT	$0244,$0244,$0222,$0466,$0668,$0AAA,$0AAC,$0ACC
+			DATAINT	$0EEE,$0ACA,$0CAC,$0688,$0000,$0000,$0000,$0000				
+color23:	DATAINT	$0000,$0000,$0666,$0888,$0EEE,$0ACC,$0688,$0668
+			DATAINT	$0ACA,$0224,$0868,$0000,$0000,$0000,$0000,$0000			
+
+
+tilec1:		datafile credits\1.bin, bin
+tilec2:		datafile credits\2.bin, bin
+tilec3:		datafile credits\3.bin, bin
+tilec4:		datafile credits\4.bin, bin
+tilec5:		datafile credits\5.bin, bin
+tilec7:		datafile credits\7.bin, bin
+tilec8:		datafile credits\8.bin, bin
+tilec9:		datafile credits\9.bin, bin
+tilec11b:	datafile credits\11b.bin, bin
+tilec12b:	datafile credits\12b.bin, bin
+tilec18:	datafile credits\18.bin, bin
+
+
+colorc1:   	DATAINT	$0020,$0464,$0242,$0020,$0244,$0686,$08A8,$0422
+			DATAINT	$0ACC,$0ACA,$0688,$0CCC,$0042,$0264,$0000,$0000
+colorc2:	DATAINT	$0444,$0444,$0888,$0688,$0222,$0ACC,$0668,$0EEE
+			DATAINT	$0ACA,$0224,$0686,$0000,$0000,$0000,$0000,$0000
+colorc3:	DATAINT	$08AA,$0688,$08AA,$0ACC,$0668,$0CCE,$0AAC,$0466
+			DATAINT	$0222,$0446,$0468,$0444,$0666,$0244,$068A,$0224
+colorc4:	DATAINT	$0002,$0002,$0444,$0244,$0668,$0468,$0688,$0AAC
+			DATAINT	$0ACC,$0CEE,$0AAA,$0224,$0424,$0246,$068A,$0000
+colorc5:	DATAINT	$0446,$0446,$08AA,$0688,$0222,$0224,$0668,$0244
+			DATAINT	$0AAC,$0CCE,$0ACC,$0422,$0000,$0000,$0000,$0000
+colorc7:	DATAINT	$0224,$0000,$0224,$0244,$0666,$0668,$0688,$0CCA
+			DATAINT	$0886,$0866,$0686,$0000,$0000,$0000,$0000,$0000
+colorc8:	DATAINT	$0666,$0666,$0AAA,$0CAC,$0EEE,$0ACA,$0668,$0688
+			DATAINT	$0CCA,$0224,$0222,$0868,$0424,$0000,$0000,$0000
+colorc9:	DATAINT	$0CCC,$0CCC,$0666,$0668,$0688,$0222,$0422,$0686
+			DATAINT	$0244,$0868,$0866,$0000,$0000,$0000,$0000,$0000
+colorc11b:	DATAINT	$0888,$0888,$0688,$08AA,$0AAA,$0ACC,$0CCC,$0466
+			DATAINT	$0022,$0668,$0224,$0244,$0000,$0000,$0000,$0000
+colorc12b:	DATAINT	$08AA,$08AA,$0888,$0688,$0668,$0ACC,$0CCC,$0AAC
+			DATAINT	$0666,$0466,$0444,$0CEE,$0000,$0000,$0000,$0000
+colorc18:	DATAINT	$0466,$0222,$0466,$0224,$0244,$08AA,$0688,$0AAC
+			DATAINT	$0668,$0ACC,$0CCE,$0CEE,$0EEE,$0000,$0000,$0000
+
+
+Credits:	datafile Pics\Credits.bin,bin
+Jam:		datafile Pics\Jam.bin,bin
+
+CreditsColor:
+			DATAINT	$0446,$0446,$0668,$068A,$08AC,$068C,$0224,$0002
+			DATAINT	$0246,$0422,$066C,$0228,$0248,$086C,$0000,$0000
+JamColor:
+			DATAINT	$0000,$0000,$0EEE,$0CA2,$0440,$0420,$02EE,$0024
+			DATAINT	$0286,$0066,$0042,$0666,$0442,$0864,$0068,$0000	
+
+
+
+	
+draw:
+	i=128
+	for y=0 to 27
+		for x=0 to 39
+			drawtile i,x,y
+			i++
+		next
+	next
+	enable screen
+	return
